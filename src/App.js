@@ -6,33 +6,31 @@ import CoinList from "./CoinList";
 
 function App() {
   return (
-    <Router>
-      <div style={styles.container}>
-        <header style={styles.header}>
-          <h1>Welcome to CoinMultiply</h1>
-        </header>
-        <main style={styles.main}>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div>
-                  <p>Discover and trade the newest meme coins on bullx.io.</p>
-                  <Link to="/login">
-                    <button style={styles.button}>Login</button>
-                  </Link>
-                </div>
-              }
-            />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/coins" element={<CoinList />} />
-          </Routes>
-        </main>
-        <footer style={styles.footer}>
-          <p>&copy; 2024 CoinMultiply. All Rights Reserved.</p>
-        </footer>
-      </div>
-    </Router>
+    <div style={styles.container}>
+      <header style={styles.header}>
+        <h1>Welcome to CoinMultiply</h1>
+      </header>
+      <main style={styles.main}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <p>Discover and trade the newest meme coins on bullx.io.</p>
+                <Link to="/login">
+                  <button style={styles.button}>Login</button>
+                </Link>
+              </div>
+            }
+          />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/coins" element={<CoinList />} />
+        </Routes>
+      </main>
+      <footer style={styles.footer}>
+        <p>&copy; 2024 CoinMultiply. All Rights Reserved.</p>
+      </footer>
+    </div>
   );
 }
 
@@ -96,6 +94,7 @@ export default App;
 //     "predeploy": "npm run build",
 //     "deploy": "gh-pages -d build"
 //   }
+
 // - gh-pages paketini yükle: npm install --save-dev gh-pages
 // - Deploy için: npm run deploy
 
